@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camibuil | Combos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body onload="cargarDatos()">
+    <header>
+        <div class="header">
+            <div>
+                <button onclick="location.href='index.html'" class="image_button">
+                    <img class="logo" src="images/logo.png" />
+                </button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='camillas.html'">Camillas portatiles</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='articulos.html'">Articulos estéticos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='combos.html'">Combos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='contacto.html'">Contáctenos</button>
+            </div>
+        </div>
+    </header>
+    <center>
+        <div class="contacto_mobile">
+            <button class="boton_fotos_camillas" onclick="javascript:history.back()">Atrás</button>
+        </div>
+        <button class="boton_fotos_camillas" onclick="location.href='fotos.html'">Ver todas las fotos</button>
+        <p>Si te interesa alguno de estos objetos, <br>
+            y deseas conseguir más información, contáctenos. <br>
+            Para eso haz <a href="contacto.html">clic aquí</a>
+        </p>
+    </center>
+    <div class="tabla_camillas" id="camillas">
+    </div>
+    <script>
+        function alerta() {
+            alert("Si te interesa ve a la sección contáctanos :)")
+        }
+        var json = {
+            "imagenes":
+                [
+                    {
+                        "nombre_imagen": "combo1.jpeg",
+                        "precio": "$",
+                        "titulo": "Camilla + Silla giratoria + Escalera de 1 paso"
+                    },
+                    {
+                        "nombre_imagen": "combo2.jpeg",
+                        "precio": "$",
+                        "titulo": "Camilla + Escalera de 1 paso"
+                    },
+                    {
+                        "nombre_imagen": "combo3.jpeg",
+                        "precio": "$",
+                        "titulo": "Camilla + Mesa auxiliar + Escalera de 1 paso"
+                    },
+                    {
+                        "nombre_imagen": "combo4.jpeg",
+                        "precio": "$",
+                        "titulo": "Camilla + Silla giratoria sin respaldar + Escalera de 1 paso (Tela con detalles)"
+                    }
+                ]
+        }
+
+        function cargarDatos() {
+            var DataJSON = JSON.parse(JSON.stringify(json));
+            for (i = 0; i < DataJSON.imagenes.length; i++) {
+
+                $("#camillas").append(
+                    '<div class="section_camillas">' +
+                    '<div class="item_camillas">' +
+                    '<img class="img_camillas" onclick="alerta()" src="images/' + DataJSON.imagenes[i].nombre_imagen + '">' +
+                    '</div>' +
+                    '<div class="item_camillas_description">' +
+                    '<b>' + DataJSON.imagenes[i].titulo + '</b><br>' + '<p>' + DataJSON.imagenes[i].precio +
+                    '</p>' +
+                    '</div>' +
+                    '</div>'
+                );
+            }
+        }
+    </script>
+</body>

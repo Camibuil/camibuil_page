@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camibuil | Camillas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+
+<body onload="cargarDatos()">
+    <header>
+        <div class="header">
+            <div>
+                <button onclick="location.href='index.html'" class="image_button">
+                    <img class="logo" src="images/logo.png" />
+                </button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='camillas.html'">Camillas portatiles</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='articulos.html'">Articulos estéticos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='combos.html'">Combos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='contacto.html'">Contáctenos</button>
+            </div>
+        </div>
+    </header>
+    <center>
+        <center>
+            <div class="contacto_mobile">
+                <button class="boton_fotos_camillas" onclick="javascript:history.back()">Atrás</button>
+            </div>
+        </center>
+        <button class="boton_fotos_camillas" onclick="location.href='fotos.html'">Ver todas las fotos</button>
+        <p>Si te interesa alguno de estos objetos, <br>
+            y deseas conseguir más información, contáctenos. <br>
+            Para eso haz <a href="contacto.html">clic aquí</a></p>
+    </center>
+    <div class="tabla_camillas" id="camillas">
+    </div>
+    <script>
+        function alerta() {
+            alert("Si te interesa ve a la sección contáctanos o da clic en comprar :)")
+        }
+        var json = {
+            "imagenes":
+                [
+                    {
+                        "nombre_imagen": "camilla_cerrada.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil verde",
+                        "link": "https://www.olx.com.co/item/camillas-fabrica-directa-iid-1105777177"
+                    },
+                    {
+                        "nombre_imagen": "camilla_cerrada1.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil salmón",
+                        "link": "https://www.olx.com.co/item/camillas-de-la-fabrica-a-tu-casa-iid-1105672711"
+                    },
+                    {
+                        "nombre_imagen": "camilla_cerrada2.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil rosa",
+                        "link": "https://www.olx.com.co/item/camillas-portatiles-promociones-con-forro-iid-1100849054"
+                    },
+                    {
+                        "nombre_imagen": "camilla_cerrada3.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil negra",
+                        "link": "https://www.olx.com.co/item/camilla-portatil-negra-fabrica-iid-1105401924"
+                    },
+                    {
+                        "nombre_imagen": "camilla_cerrada4.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil fucsia",
+                        "link": "https://www.olx.com.co/item/camillas-portatiles-multiusos-iid-1105694639"
+                    },
+                    {
+                        "nombre_imagen": "camilla_cerrada5.jpeg",
+                        "precio": "$240.000",
+                        "titulo": "Camilla portatil azul claro",
+                        "link": "https://www.olx.com.co/item/camillas-portatiles-en-promocion-240000-iid-1065413763"
+                    }
+                ]
+        }
+
+        function cargarDatos() {
+            var DataJSON = JSON.parse(JSON.stringify(json));
+            for (i = 0; i < DataJSON.imagenes.length; i++) {
+
+                $("#camillas").append(
+                    '<div class="section_camillas">' +
+                    '<div class="item_camillas">' +
+                    '<img class="img_camillas" onclick="alerta()" src="images/' + DataJSON.imagenes[i].nombre_imagen + '">' +
+                    '</div>' +
+                    '<div class="item_camillas_description">' +
+                    '<b>' + DataJSON.imagenes[i].titulo + '</b><br>' + '<p>' + DataJSON.imagenes[i].precio +
+                    '</p> <form action=" ' + DataJSON.imagenes[i].link + '"><input class="boton_camillas" type="submit" value="Comprar" />' +
+                    '</form>' +
+                    '</div>' +
+                    '</div>'
+                );
+            }
+        }
+    </script>
+</body>
+
+</html>

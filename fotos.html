@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camibuil | Contacto</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+
+<body onload="cargarDatos()">
+    <header>
+        <div class="header">
+            <div>
+                <button onclick="location.href='index.html'" class="image_button">
+                    <img class="logo" src="images/logo.png" />
+                </button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='camillas.html'">Camillas portatiles</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='articulos.html'">Articulos estéticos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='combos.html'">Combos</button>
+            </div>
+            <div class="boton_header">
+                <button onclick="location.href='contacto.html'">Contáctenos</button>
+            </div>
+        </div>
+    </header>
+    <center>
+        <button class="boton_fotos_camillas" onclick="javascript:history.back()">Atrás</button>
+        <p>Si te interesa alguno de estos objetos, <br>
+            y deseas conseguir más información, contáctenos. <br>
+            Para eso haz <a href="contacto.html">clic aquí</a></p>
+    </center>
+    <div class="tabla_camillas" id="camillass">
+    </div>
+    <script>
+        function alerta() {
+            alert("Si te interesa ve a la sección contáctanos :)")
+        }
+        var json = {
+            "imagenes":
+                [
+                    {
+                        "link": "articulo1.jpeg",
+                    },
+                    {
+                        "link": "articulo2.jpeg",
+                    },
+                    {
+                        "link": "articulo3.jpeg",
+                    },
+                    {
+                        "link": "articulo4.jpeg",
+                    },
+                    {
+                        "link": "articulo5.jpeg",
+                    },
+                    {
+                        "link": "articulo6.jpeg",
+                    },
+                    {
+                        "link": "articulo7.jpeg",
+                    },
+                    {
+                        "link": "articulos.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada1.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada2.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada3.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada4.jpeg",
+                    },
+                    {
+                        "link": "camilla_cerrada5.jpeg",
+                    },
+                    {
+                        "link": "camillas_cerradas.jpeg",
+                    },
+                    {
+                        "link": "camilla1.jpeg",
+                    },
+                    {
+                        "link": "camilla2.jpeg",
+                    },
+                    {
+                        "link": "camilla3.jpeg",
+                    },
+                    {
+                        "link": "camilla4.jpeg",
+                    },
+                    {
+                        "link": "combo1.jpeg",
+                    },
+                    {
+                        "link": "combo2.jpeg",
+                    },
+                    {
+                        "link": "combo3.jpeg",
+                    },
+                    {
+                        "link": "combo4.jpeg",
+                    }
+                ]
+        }
+        function cargarDatos() {
+            var DataJSON = JSON.parse(JSON.stringify(json));
+            for (i = 0; i < DataJSON.imagenes.length; i++) {
+
+                $("#camillass").append(
+                    '<div class="section_camillas">' +
+                    '<div class="item_camillas">' +
+                    '<img class="img_camillas" onclick="alerta()" src="images/' + DataJSON.imagenes[i].link + '">' +
+                    '</div>' +
+                    '</div>'
+                );
+            }
+        }
+    </script>
+</body>

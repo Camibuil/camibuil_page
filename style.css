@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+}
+body {
+    background-color: black;
+}
+/* 
+Estilo del header
+By: Daniel Vargas
+*/
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.image_button {
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+.logo {
+    max-width: 300px;
+    max-height: 150px;
+    padding-right: 10px;
+}
+.boton_header {
+    width: 300px;
+    height: 150px;
+    padding-top: 50px;
+}
+.boton_header > button {
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    border: 4px solid white;
+}
+.boton_header > button:hover {
+    background-color: white;
+    color: black;
+}
+/* 
+Estilo del container
+By: Daniel Vargas
+*/
+.container_items {
+    display: flex;
+    justify-content: space-around;
+}
+.items_section {
+    width: 300px;
+    height: 200px;
+    border: 4px solid white;
+    border-radius: 10px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.hover {
+    display: none;
+}
+.items_section:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.hover:hover {
+    display: block;
+}
+.item_image {
+    width: 300px;
+    height: 200px;
+}
+.contacto_mobile {
+    display: none;
+}
+p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+.boton_fotos_camillas {
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    border: 4px solid white;
+}
+.boton_fotos_camillas:hover {
+    background-color: white;
+    color: black;
+}
+.tabla_camillas {
+    width: 100%;
+}
+.section_camillas {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.img_camillas {
+    width: 400px;
+    height: 200px;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+.item_camillas_description {
+    width: 200px;
+    padding: 40px;
+    align-content: flex-start;
+}
+.boton_camillas {
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    border: 4px solid white;
+}
+.boton_camillas:hover {
+    background-color: white;
+    color: black;
+}
+iframe {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 4px solid white;
+}
+
+@media (max-width: 1090px ) {
+    .header {
+        padding: 40px;
+    }
+    .logo {
+        max-width: 240px;
+        max-height: 120px;
+        padding-right: 8px;
+    }
+    .boton_header {
+        width: 240px;
+        height: 120px;
+        padding-top: 30px;
+    }
+    .boton_header > button {
+        font-size: 18px;
+        width: 160px;
+        height: 45px;
+    }
+    /* 
+    Estilo del container
+    By: Daniel Vargas
+    */
+}
+@media (max-width: 990px ) {
+    .header {
+        padding: 30px;
+    }
+    .logo {
+        max-width: 200px;
+        max-height: 100px;
+        padding-right: 6px;
+    }
+    .boton_header {
+        width: 220px;
+        height: 110px;
+        padding-top: 25px;
+    }
+    .boton_header > button {
+        font-size: 17px;
+        width: 140px;
+        height: 35px;
+    }
+    /* 
+    Estilo del container
+    By: Daniel Vargas
+    */
+    .items_section {
+        width: 260px;
+        height: 160px;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    .item_image {
+        width: 260px;
+        height: 160px;
+    }
+    p {
+        padding-top: 8px;
+        font-size: 17px;
+    }
+    .boton_fotos_camillas {
+        font-size: 17px;
+        width: 160px;
+        height: 40px;
+    }
+    .section_camillas {
+        padding: 25px;
+    }
+    
+    .img_camillas {
+        width: 360px;
+        height: 180px;
+    }
+    .item_camillas_description {
+        width: 160px;
+        padding: 30px;
+    }
+    .boton_camillas {
+        font-size: 16px;
+        margin-top: 8px;
+        width: 140px;
+        height: 25px;
+    }
+}
+@media (max-width: 820px ) {
+    .header {
+        padding: 20px;
+    }
+    /* 
+    Estilo del container
+    By: Daniel Vargas
+    */
+    .items_section {
+        width: 240px;
+        height: 140px;
+    }
+    .item_image {
+        width: 240px;
+        height: 140px;
+    }
+}
+@media (max-width: 768px ) {
+    .logo {
+        max-width: 300px;
+        max-height: 150px;
+    }
+    .boton_header {
+        display: none;
+    }
+    /* 
+    Estilo del container
+    By: Daniel Vargas
+    */
+    .container_items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .items_section {
+        margin-top: 40px;
+        width: 300px;
+        height: 200px;
+    }
+    .items_section:nth-child(3){
+        margin-bottom: 40px;
+    }
+    .item_image {
+        width: 300px;
+        height: 200px;
+    }
+    p {
+        font-size: 17px;
+    }
+    .contacto_mobile {
+        margin: 30px;
+        display: block;
+    }
+    .section_camillas {
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .img_camillas {
+        width: 300px;
+        height: 200px;
+    }
+    .item_camillas_description {
+        width: 200px;
+        padding: 40px;
+        text-align: center;
+    }
+    .boton_camillas {
+        font-size: 18px;
+        width: 150px;
+        height: 30px;
+    }
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+@media (max-width: 500px ) {
+    p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 320px ) {
+    .logo {
+        max-width: 270px;
+        max-height: 120px;
+    }
+    /* 
+    Estilo del container
+    By: Daniel Vargas
+    */
+    .items_section {
+        width: 250px;
+        height: 150px;
+    }
+    .item_image {
+        width: 250px;
+        height: 150px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .img_camillas {
+        width: 250px;
+        height: 150px;
+    }
+    .boton_camillas {
+        font-size: 16px;
+    }
+    iframe {
+        width: 250px;
+        height: 150px;
+    }
+}
